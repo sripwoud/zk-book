@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Set Theory &#8212; ZK-Book Exercises Solutions</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'set-theory';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Group Theory" href="group-theory.html" />
+    <link rel="prev" title="ZK Book Exercises Solutions" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://static.wixstatic.com/media/c0c19a_059ab29b829d4551bbd7426996089b9e~mv2.png/v1/crop/x_501,y_634,w_2160,h_2693/fill/w_676,h_844,al_c,q_95,enc_auto/Rareskills%20ZK%20Book%20Transparent.png" class="logo__image only-light" alt="ZK-Book Exercises Solutions - Home"/>
+    <script>document.write(`<img src="https://static.wixstatic.com/media/c0c19a_059ab29b829d4551bbd7426996089b9e~mv2.png/v1/crop/x_501,y_634,w_2160,h_2693/fill/w_676,h_844,al_c,q_95,enc_auto/Rareskills%20ZK%20Book%20Transparent.png" class="logo__image only-dark" alt="ZK-Book Exercises Solutions - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    ZK Book Exercises Solutions
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Set Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group-theory.html">2. Group Theory</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/sripwoud/zk-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/sripwoud/zk-book/issues/new?title=Issue%20on%20page%20%2Fset-theory.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/set-theory.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1. Set Theory</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="set-theory">
+<h1>1. <a class="reference external" href="https://www.rareskills.io/post/set-theory">Set Theory</a><a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h1>
+<p><strong>Exercise: Assume you have a proper definition for integers. Create a well-defined set of rational numbers.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\mathbb{Q} = \left\{ \frac{a}{b} \mid a, b \in \mathbb{Z}, b \neq 0 \right\}
+\]</div>
+<hr class="docutils" />
+<p><strong>Exercise: Define the subset relationship between integers, rational numbers, real numbers, and complex numbers.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
+\]</div>
+<hr class="docutils" />
+<p><strong>Exercise: Define the relationship between the set of transcendental numbers and the set of complex numbers in terms of subsets. Is it a proper subset?</strong></p>
+<div class="math notranslate nohighlight">
+\[
+transcendental\; numbers \subseteq \mathbb{C}
+\]</div>
+<hr class="docutils" />
+<p><strong>Exercise: Using the formal definition of equality, show that if two finite sets have different cardinality, they cannot be equal.</strong></p>
+<p>Suppose <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two finite sets such that <span class="math notranslate nohighlight">\(A =B\)</span> but <span class="math notranslate nohighlight">\(|A| \neq |B|\)</span>.<br />
+By our assumption, <span class="math notranslate nohighlight">\(A=B\)</span>.<br />
+Therefore, by the formal definition of set equality: <span class="math notranslate nohighlight">\(A \subseteq B \text{ and } B\subseteq A\)</span>.<br />
+Since <span class="math notranslate nohighlight">\(A \subseteq B\)</span>, every element of <span class="math notranslate nohighlight">\(A\)</span> is also an element of <span class="math notranslate nohighlight">\(B\)</span>.<br />
+Likewise, since <span class="math notranslate nohighlight">\(B \subseteq A\)</span>, every element of <span class="math notranslate nohighlight">\(B\)</span> is also an element of <span class="math notranslate nohighlight">\(A\)</span>.<br />
+Therefore, both sets contain the exact same elements.<br />
+For finite sets, the cardinality or size of a set is determined by the number of distinct elements it contains. Since <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> have the exact same elements (by our assumption that they are equal), they must also have the same cardinality.<br />
+This contradicts our initial assumption that <span class="math notranslate nohighlight">\(|A| \neq |B|\)</span>.</p>
+<p>Thus, if two finite sets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> have different cardinalities, they cannot be equal.</p>
+<hr class="docutils" />
+<p><strong>Exercise: Define a mapping (function) from integers n ∈ 1,2,3,4,5,6 to the set {even, odd}.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x) = 
+\begin{cases} 
+\text{even}\; &amp; if \; x \mod 2 = 0\\
+\text{odd}\; &amp; if \; x \mod 2 \neq 0 
+\end{cases}
+\end{split}\]</div>
+<hr class="docutils" />
+<p><strong>Exercise: Take the cartesian product of the set of integers 0,1,2,…,8 and the polygons triangle, square, pentagon, hexagon, heptagon, and octagon. Define a mapping such that the integer maps to the number of sides on the shape. For example, the ordered pair (4, □) should be in the subset, but (7,△) should not be in the subset of the cartesian product.</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>triangle</p></th>
+<th class="head"><p>square</p></th>
+<th class="head"><p>pentagon</p></th>
+<th class="head"><p>hexagon</p></th>
+<th class="head"><p>heptagon</p></th>
+<th class="head"><p>octagon</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>(3, triangle)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p></p></td>
+<td><p>(4, square)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>(5, pentagon)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>(6, hexagon)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>(7, heptagon)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>(8, octagon)</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Exercise: Let set A be {1,2,3} and set B be {x,y,z}. Define a function from A to B that is well-defined, but not surjective and not injective.</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-fd6df793-7488-474e-981f-b8b28974eec0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-fd6df793-7488-474e-981f-b8b28974eec0" title="Permalink to this equation">#</a></span>\[\begin{align}
+f: A &amp;\to B\\
+a &amp;\mapsto f(a) =
+    \begin{cases}
+      x &amp; \text{if } a \in \{1,2\} \\
+      y &amp; \text{if } a = 3
+    \end{cases}
+\end{align}\]</div>
+<hr class="docutils" />
+<p><strong>Exercise: Pick a subset of ordered pairs that defines a * b mod 3.</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,0)</p></th>
+<th class="head"><p>(1,0)</p></th>
+<th class="head"><p>(2,0)</p></th>
+<th class="head"><p>(0,1)</p></th>
+<th class="head"><p>(1,1)</p></th>
+<th class="head"><p>(2,1)</p></th>
+<th class="head"><p>(0,2)</p></th>
+<th class="head"><p>(1,2)</p></th>
+<th class="head"><p>(2,2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>((0,0),0)</p></td>
+<td><p>((1,0),0)</p></td>
+<td><p>((2,0),0)</p></td>
+<td><p>((0,1),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((0,2),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((1,1),1)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,2),1)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,1),2)</p></td>
+<td><p></p></td>
+<td><p>((1,2),2)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Exercise: Consider a set <span class="math notranslate nohighlight">\(A\)</span>, demonstrate that if the binary operator <span class="math notranslate nohighlight">\(\circ\)</span> is commutative, then the map from <span class="math notranslate nohighlight">\((A \times A) \to A\)</span> cannot be injective if the cardinality of <span class="math notranslate nohighlight">\(|A| \geq 2\)</span>.</strong></p>
+<p>Because <span class="math notranslate nohighlight">\(|A| \geq 2\)</span>, <span class="math notranslate nohighlight">\(\exists a,b \in A \)</span> such that <span class="math notranslate nohighlight">\(a \neq b\)</span>.<br />
+<span class="math notranslate nohighlight">\((a,b)\)</span> maps to <span class="math notranslate nohighlight">\(a \circ b\)</span> and <span class="math notranslate nohighlight">\((b,a)\)</span> maps to <span class="math notranslate nohighlight">\(b \circ a\)</span>.<br />
+If <span class="math notranslate nohighlight">\(\circ\)</span> is commutative, <span class="math notranslate nohighlight">\(a \circ b = b \circ a\)</span>.<br />
+And if <span class="math notranslate nohighlight">\(A \times A \to A\)</span> is injective,  <span class="math notranslate nohighlight">\(a \circ b = b \circ a \implies (a,b) = (b,a) \implies a =b\)</span>.
+This contradicts our initial assumption that <span class="math notranslate nohighlight">\(a \neq b\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Exercise: Define our set A to be the numbers 0,1,2,3,4 and our binary operator to be subtraction modulo 5. Define all the ordered pairs of A ⨉ A in a table, then map that set of ordered pairs to A.</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>(0,0)</p></th>
+<th class="head"><p>(1,0)</p></th>
+<th class="head"><p>(2,0)</p></th>
+<th class="head"><p>(3,0)</p></th>
+<th class="head"><p>(4,0)</p></th>
+<th class="head"><p>(0,1)</p></th>
+<th class="head"><p>(1,1)</p></th>
+<th class="head"><p>(2,1)</p></th>
+<th class="head"><p>(3,1)</p></th>
+<th class="head"><p>(4,1)</p></th>
+<th class="head"><p>(0,2)</p></th>
+<th class="head"><p>(1,2)</p></th>
+<th class="head"><p>(2,2)</p></th>
+<th class="head"><p>(3,2)</p></th>
+<th class="head"><p>(4,2)</p></th>
+<th class="head"><p>(0,3)</p></th>
+<th class="head"><p>(1,3)</p></th>
+<th class="head"><p>(2,3)</p></th>
+<th class="head"><p>(3,3)</p></th>
+<th class="head"><p>(4,3)</p></th>
+<th class="head"><p>(0,4)</p></th>
+<th class="head"><p>(1,4)</p></th>
+<th class="head"><p>(2,4)</p></th>
+<th class="head"><p>(3,4)</p></th>
+<th class="head"><p>(4,4)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>((0,0),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((1,1),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,2),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((3,3),0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((4,4),0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p>((1,0),1)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,1),1)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((3,2),1)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((4,3),1)</p></td>
+<td><p>((0,4),1)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,0),2)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((3,1),2)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((4,2),2)</p></td>
+<td><p>((0,3),2)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((1,4),2)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((3,0),3)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((4,1),3)</p></td>
+<td><p>((0,2),3)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((1,3),3)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,4),3)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((4,0),4)</p></td>
+<td><p>((0,1),4)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((1,2),4)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((2,3),4)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>((3,4),4)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Exercise: Work out for yourself that concatenating “foo”, “bar”, “baz” in that order is associative. Remember, associative means (A op B) op C = A op (B op C).</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>
+<span class="n">baz</span> <span class="o">=</span> <span class="s1">&#39;baz&#39;</span>
+
+<span class="n">foo</span> <span class="o">+</span> <span class="p">(</span><span class="n">bar</span> <span class="o">+</span> <span class="n">baz</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">foo</span> <span class="o">+</span> <span class="n">bar</span><span class="p">)</span> <span class="o">+</span> <span class="n">baz</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Exercise: Give an example of a magma and a semigroup. The magma must not be a semigroup. Don’t use the examples above.</strong></p>
+<p>Magma example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f: \mathbb{Q} \times \mathbb{Q} &amp;\to \mathbb{Q}\\
+(x,y) &amp;\mapsto x / y
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Semi-group example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f: \mathbb{N} \times \mathbb{N} &amp;\to \mathbb{N}\\
+(x,y) &amp;\mapsto x * y
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Exercise: Let our binary operator be the function min(a,b) over integers. Is this a magma, semigroup, or monoid? What if we restrict the domain to be positive integers (zero or greater)? What about the binary operator max(a,b) over those two domains?</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f: \mathbb{Z} \times \mathbb{Z} &amp;\to \mathbb{Z}\\
+(x,y) &amp;\mapsto min(x,y)
+\end{align}\\
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\forall a,b,c \in \mathbb{Z},\;min(min(a,b),c) = min(a,min(b,c)) \implies \text{associative} \implies \text{semigroup}\)</span>.<br />
+The identity element is missing to make this a monoid.<br />
+Same for positive integers.
+There is no integer that is bigger than all other integers so that <span class="math notranslate nohighlight">\(\forall x \in \mathbb{Z},\;min(x,
+\text{identity}) = x\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f: \mathbb{Z} \times \mathbb{Z} &amp;\to \mathbb{Z}\\
+(x,y) &amp;\mapsto max(x,y)
+\end{align}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\forall a,b,c \in \mathbb{Z},\;max(max(a,b),c) = max(a,max(b,c)) \implies \text{associative} \implies \text{semigroup}\)</span>.
+No identity elemt on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>. But on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(0\)</span> is the identity element and we get a monoid: <span class="math notranslate nohighlight">\(\forall x \in \mathbb{N},\;max(x,0) = x\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Exercise: Let our set be all 3 bit binary numbers (a set of cardinality 8). Let our possible binary operators be bit-wise and, bit-wise or, bit-wise xor, bit-wise nor, bit-wise xnor, and bit-wise nand. Clearly this is closed because the output is a 3 bit binary number. For each binary operator, determine if the set under that binary operator is a magma, semigroup, or monoid.</strong></p>
+<p><strong>AND</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>
+
+<span class="n">semigroup</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">z</span>  <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">z</span><span class="p">)</span> <span class="o">!=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)):</span>
+                <span class="n">semigroup</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;is semigroup: </span><span class="si">{</span><span class="n">semigroup</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">monoid</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">if</span> <span class="n">semigroup</span><span class="p">:</span>
+    <span class="n">monoid</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+         <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">monoid</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">break</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;is monoid: </span><span class="si">{</span><span class="n">monoid</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>is semigroup: True
+is monoid: False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>OR</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bit_and</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">|</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">bit_or</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">|</span> <span class="n">y</span>
+    
+<span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">^</span> <span class="n">y</span>
+    
+<span class="k">def</span> <span class="nf">nor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">~</span><span class="p">(</span><span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">xnor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">~</span><span class="p">(</span><span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">nand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">~</span><span class="p">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span><span class="p">)</span>    
+
+<span class="k">def</span> <span class="nf">check_all</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">semigroup</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">z</span>  <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">z</span><span class="p">)</span> <span class="o">!=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)):</span>
+                    <span class="n">semigroup</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="k">break</span>
+    
+    
+    <span class="n">monoid</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">semigroup</span><span class="p">:</span>
+        <span class="n">monoid</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+             <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+                <span class="n">monoid</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> is a: </span><span class="si">{</span><span class="s2">&quot;monoid&quot;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">monoid</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s2">&quot;semigroup&quot;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">semigroup</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s2">&quot;magma&quot;</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;set of 3 bit binary numbers under:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">[</span><span class="n">bit_and</span><span class="p">,</span> <span class="n">bit_or</span><span class="p">,</span> <span class="n">xor</span><span class="p">,</span> <span class="n">nor</span><span class="p">,</span> <span class="n">xnor</span><span class="p">,</span> <span class="n">nand</span><span class="p">]:</span>
+    <span class="n">check_all</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set of 3 bit binary numbers under:
+bit_and is a: monoid
+bit_or is a: monoid
+xor is a: monoid
+nor is a: magma
+xnor is a: semigroup
+nand is a: magma
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Exercise: Why can’t strings under concatenation be a group?</strong><br />
+Assuming the identity element is the empty string.
+There is nothing we can concatenate to a non-empty string to get the empty string.
+So there is no inverse.</p>
+<hr class="docutils" />
+<p><strong>Exercise: Polynomials under addition satisfy the property of a group. Demonstrate this is the case by showing it matches all the properties that define a group.</strong></p>
+<p>Let’s assume that the coefficients of the polynomials belong to a set <span class="math notranslate nohighlight">\(\mathbb{S}\)</span> closed under addition: <span class="math notranslate nohighlight">\(\forall a,b \in \mathbb{S}, a+b \in \mathbb{S}\)</span>.<br />
+Let’s note the set of all polynomials with coefficients in <span class="math notranslate nohighlight">\(\mathbb{S}\)</span> as <span class="math notranslate nohighlight">\(\mathbb{P}(\mathbb{S})\)</span>.<br />
+Let <span class="math notranslate nohighlight">\(P(x), Q(x), R(x) \in \mathbb{P}(\mathbb{S})\)</span>.</p>
+<ol class="arabic simple">
+<li><p><strong>Closure</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+P(x) + Q(x) = \sum_{i=0}^n a_i x^i + \sum_{i=0}^n b_i x^i = \sum_{i=0}^n (a_i + b_i) x^i \in \mathbb{P}(\mathbb{S})\ \text{ because } \mathbb{S} \text{ is closed under addition}.
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Associativity</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P(x) + (Q(x) + R(x)) = P(x) + \left(\sum_{i=0}^n b_i x^i + \sum_{i=0}^n c_i x^i\right) = \sum_{i=0}^n a_i + \sum_{i=0}^n (b_i + c_i) x^i = \sum_{i=0}^n (a_i + (b_i + c_i)) x^i.\\
+(P(x) + Q(x)) + R(x) = \left(\sum_{i=0}^n a_i x^i + \sum_{i=0}^n b_i x^i\right) + R(x) = \sum_{i=0}^n (a_i + b_i) x^i + \sum_{i=0}^n c_i x^i = \sum_{i=0}^n ((a_i + b_i) + c_i) x^i.\\
+\end{split}\]</div>
+<p>By associativity of addition in <span class="math notranslate nohighlight">\(\mathbb{S}\)</span>, <span class="math notranslate nohighlight">\((a_i + (b_i + c_i)) = ((a_i + b_i) + c_i)\)</span>, so <span class="math notranslate nohighlight">\(P(x) + (Q(x) + R(x)) = (P(x) + Q(x)) + R(x)\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Identity Element</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+P(x) + 0 = \sum_{i=0}^n a_i x^i + \sum_{i=0}^n 0 x^i = \sum_{i=0}^n a_i x^i = P(x)
+\]</div>
+<p>Because 0 is the identity element of <span class="math notranslate nohighlight">\(\mathbb{S}\)</span>.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Inverse</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+P(x)+(-P(x)) = \sum_{i=0}^n a_i x^i + \sum_{i=0}^n (-a_i) x^i = \sum_{i=0}^n (a_i + (-a_i)) x^i = \sum_{i=0}^n 0 x^i = 0
+\]</div>
+<p>Because <span class="math notranslate nohighlight">\(-a_i\)</span> is the inverse of <span class="math notranslate nohighlight">\(a_i\)</span> in <span class="math notranslate nohighlight">\(\mathbb{S}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\mathbb{P}(\mathbb{S})\)</span> under addition fulfills the closure, associativity, identity and inverse properties, it is therefore a group.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ZK Book Exercises Solutions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="group-theory.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Group Theory</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By sripwoud
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
