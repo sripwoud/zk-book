@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,12 +35,13 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -62,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rings-fields';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -312,6 +315,90 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rings-and-fields">
 <h1>3. <a class="reference external" href="https://www.rareskills.io/post/rings-and-fields">Rings and Fields</a><a class="headerlink" href="#rings-and-fields" title="Permalink to this heading">#</a></h1>
+<p><strong>Exercise: by a ring’s definition, why is the following statement not always true? What assumption is it making about the ring?</strong><br />
+Let our binary operators be □ and ☆, where □ is the first binary operator and ☆ is the second binary operator.<br />
+The following is not necessarily true of a ring: <em>(a □ b) ☆ c = c ☆ (a □ b)</em></p>
+<p>By definition:</p>
+<ul class="simple">
+<li><p>under ☆, the set is an abelian group, i.e. a commutative group.</p></li>
+<li><p>under □, the set is a monoid, i.e. an associative binary operation with an identity element.</p></li>
+</ul>
+<p>□ is not necessarily commutative, which is the required property for the statement to be true.</p>
+<hr class="docutils" />
+<p><strong>Exercise: use the definition of a ring to show that the trivial ring ({0} under addition and multiplication) is a ring</strong></p>
+<p>The trivial ring is a ring because it satisfies the following properties:</p>
+<ul class="simple">
+<li><p>under addition, the set is an abelian group, i.e. a commutative group.</p>
+<ul>
+<li><p>closure: <span class="math notranslate nohighlight">\(0 + 0 = 0 \in \{0\}\)</span></p></li>
+<li><p>associativity: <span class="math notranslate nohighlight">\(0 + (0 + 0) = (0 + 0) + 0 = 0\)</span></p></li>
+<li><p>identity (<span class="math notranslate nohighlight">\(0\)</span>): <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span></p></li>
+<li><p>inverse (<span class="math notranslate nohighlight">\(0\)</span>): <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span></p></li>
+<li><p>commutativity: <span class="math notranslate nohighlight">\(0 + 0 = 0 = 0 + 0\)</span></p></li>
+</ul>
+</li>
+<li><p>under multiplication, the set is a monoid, i.e. an associative binary operation with an identity element.</p>
+<ul>
+<li><p>closure: <span class="math notranslate nohighlight">\(0 \times 0 = 0 \in \{0\}\)</span></p></li>
+<li><p>associativity: <span class="math notranslate nohighlight">\(0 \times (0 \times 0) = (0 \times 0) \times 0 = 0\)</span></p></li>
+<li><p>identity (<span class="math notranslate nohighlight">\(0\)</span>): <span class="math notranslate nohighlight">\(0 \times 0 = 0\)</span></p></li>
+</ul>
+</li>
+<li><p>multiplication distributes over addition: <span class="math notranslate nohighlight">\(0 \times (0 + 0) = 0 = 0 \times 0 + 0 \times 0\)</span></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Exercise: demonstrate that square matrices of real numbers under addition and multiplication is a ring. Think carefully about what the identity elements are and whether an inverse always exists.</strong></p>
+<p>The set of square matrices of real numbers under addition and multiplication is a ring because it satisfies the following properties:</p>
+<ul>
+<li><p>under addition, the set is an abelian group, i.e. a commutative group.<br />
+Closure, associativity, identity (<span class="math notranslate nohighlight">\(\mathbf{[0]}\)</span>), inverse (<span class="math notranslate nohighlight">\(\mathbf{[A]} + \mathbf{[-A]}\)</span>) and commutativity are satisfied because real numbers under addition form an abelian group and matrices addition is defined as the addition of the corresponding elements.</p></li>
+<li><p>under multiplication, the set is a monoid, i.e. an associative binary operation with an identity element.<br />
+Let <span class="math notranslate nohighlight">\(\mathbf{A} \in \mathbb{R}^{n \times n}\)</span>: <span class="math notranslate nohighlight">\(A_{n\times n} =
+\left[ {\begin{array}{cccc}
+  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+  a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\
+\end{array} } \right]
+\)</span></p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{B} \in \mathbb{R}^{n \times n}\)</span>: <span class="math notranslate nohighlight">\(B_{n\times n} = 
+\left[ {\begin{array}{cccc}
+  b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n}\\
+  b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n}\\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+  b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}\\
+\end{array} } \right]
+\)</span></p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{C} \in \mathbb{R}^{n \times n}\)</span>: <span class="math notranslate nohighlight">\(C_{n\times n} =
+\left[ {\begin{array}{cccc}
+  c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n}\\
+  c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n}\\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+  c_{m1} &amp; c_{m2} &amp; \cdots &amp; c_{mn}\\
+\end{array} } \right]
+\)</span></p>
+</li>
+</ul>
+<p>Let’s note: <span class="math notranslate nohighlight">\(P = A \times B\)</span>, <span class="math notranslate nohighlight">\(P' = B \times C\)</span>.</p>
+<p>By definition of matrices multiplication and due to the fact that real numbers under addition and multiplication form a ring, where multiplication distributes over addition, we have:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\forall i,j \in \{1,2,...,n\}: ((A \times B) \times C)_{ij} &amp;= (P \times C)_{ij} \\
+&amp;= \sum_{k=1}^n p_{ik} c_{kj} \\
+&amp;= \sum_{k=1}^n (\sum_{l=1}^n a_{il} b_{lk}) c_{kj} \\
+&amp;= \sum_{l=1}^n \sum_{k=1}^n a_{il} b_{lk} c_{kj} \\
+&amp;= \sum_{l=1}^n a_{il} (\sum_{k=1}^n b_{lk} c_{kj}) \\
+&amp;= \sum_{l=1}^n a_{il} p'_{lj}  \\
+&amp;= (A \times P')_{ij} \\
+&amp;= (A \times (B \times C))_{ij}
+\end{align*}\]</div>
+<p>Therefore, matrices multiplication is associative.<br />
+Identity element is <span class="math notranslate nohighlight">\(\left[ {\begin{array}{cccc} 1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; 1 \end{array} } \right]\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Exercise: Why isn’t it possible to construct a trivial field using only one element?</strong><br />
+By definition of a field, the zero element is excluded for the multiplication. If the field only contains one element, the zero element is that element.<br />
+By removing it the field becomes empty. This violates the definition of a group which in particular requires the existence of an identity element.</p>
+<hr class="docutils" />
 </section>
 
     <script type="text/x-thebe-config">
@@ -402,8 +489,8 @@ By sripwoud
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
