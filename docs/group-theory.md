@@ -18,8 +18,5 @@ kernelspec:
 
 The set of integers is not a group under multiplication because it does not satisfy the inverse property.  
 For example, the inverse of 2 is 1/2, which is not an integer.  
-One would need rational numbers to form a group under multiplication.  
-
----
-****
+One would need rational numbers to form a group under multiplication.
 
