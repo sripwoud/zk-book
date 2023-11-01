@@ -7,3 +7,4 @@ chapters:
   - file: set-theory
   - file: group-theory
   - file: rings-fields
+  - file: ecc-addition

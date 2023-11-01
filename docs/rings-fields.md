@@ -95,5 +95,3 @@ Identity element is $\left[ {\begin{array}{cccc} 1 & 0 & \cdots & 0 \\ 0 & 1 & \
 **Exercise: Why isn't it possible to construct a trivial field using only one element?**  
 By definition of a field, the zero element is excluded for the multiplication. If the field only contains one element, the zero element is that element.  
 By removing it the field becomes empty. This violates the definition of a group which in particular requires the existence of an identity element.
-
----
