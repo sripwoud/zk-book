@@ -5,3 +5,7 @@ dev:
 # build
 build:
     jupyter-book build --path-output . docs
+
+# install python dependencies
+install:
+    pip install -r requirements.txt
