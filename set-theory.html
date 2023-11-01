@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Set Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group-theory.html">2. Group Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rings-fields.html">3. Rings and Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecc-addition.html">4. Elliptic Curve Point Addition</a></li>
 </ul>
 
     </div>
@@ -444,8 +445,8 @@ f(x) =
 </table>
 <hr class="docutils" />
 <p><strong>Exercise: Let set A be {1,2,3} and set B be {x,y,z}. Define a function from A to B that is well-defined, but not surjective and not injective.</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3ade928-ae8c-43d2-b6f5-284ea0d29832">
-<span class="eqno">(1)<a class="headerlink" href="#equation-d3ade928-ae8c-43d2-b6f5-284ea0d29832" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-14530c3c-4e85-45d4-a00e-aa3aa6515411">
+<span class="eqno">(1)<a class="headerlink" href="#equation-14530c3c-4e85-45d4-a00e-aa3aa6515411" title="Permalink to this equation">#</a></span>\[\begin{align}
 f: A &amp;\to B\\
 a &amp;\mapsto f(a) =
     \begin{cases}
@@ -773,7 +774,6 @@ f: \mathbb{Z} \times \mathbb{Z} &amp;\to \mathbb{Z}\\
 No identity elemt on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>. But on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(0\)</span> is the identity element and we get a monoid: <span class="math notranslate nohighlight">\(\forall x \in \mathbb{N},\;max(x,0) = x\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Exercise: Let our set be all 3 bit binary numbers (a set of cardinality 8). Let our possible binary operators be bit-wise and, bit-wise or, bit-wise xor, bit-wise nor, bit-wise xnor, and bit-wise nand. Clearly this is closed because the output is a 3 bit binary number. For each binary operator, determine if the set under that binary operator is a magma, semigroup, or monoid.</strong></p>
-<p><strong>AND</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>

@@ -21,6 +21,7 @@ kernelspec:
 $$
 \mathbb{Q} = \left\{ \frac{a}{b} \mid a, b \in \mathbb{Z}, b \neq 0 \right\}
 $$
+
 ---
 **Exercise: Define the subset relationship between integers, rational numbers, real numbers, and complex numbers.**
 
@@ -192,28 +193,6 @@ No identity elemt on $\mathbb{Z}$. But on $\mathbb{N}$, $0$ is the identity elem
 
 ---
 **Exercise: Let our set be all 3 bit binary numbers (a set of cardinality 8). Let our possible binary operators be bit-wise and, bit-wise or, bit-wise xor, bit-wise nor, bit-wise xnor, and bit-wise nand. Clearly this is closed because the output is a 3 bit binary number. For each binary operator, determine if the set under that binary operator is a magma, semigroup, or monoid.**
-
-**AND**
-
-[//]: # (|   | 000 | 001 | 010 | 011 | 100 | 101 | 110 | 111 |)
-
-[//]: # (|---|-----|-----|-----|-----|-----|-----|-----|-----|)
-
-[//]: # (|000| 000 | 000 | 000 | 000 | 000 | 000 | 000 | 000 |)
-
-[//]: # (|001| 000 | 001 | 000 | 001 | 000 | 001 | 000 | 001 |)
-
-[//]: # (|010| 000 | 000 | 010 | 010 | 000 | 000 | 010 | 010 |)
-
-[//]: # (|011| 000 | 001 | 010 | 011 | 000 | 001 | 010 | 011 |)
-
-[//]: # (|100| 000 | 000 | 000 | 000 | 100 | 100 | 100 | 100 |)
-
-[//]: # (|101| 000 | 001 | 000 | 001 | 100 | 101 | 100 | 101 |)
-
-[//]: # (|110| 000 | 000 | 010 | 010 | 100 | 100 | 110 | 110 |)
-
-[//]: # (|111| 000 | 001 | 010 | 011 | 100 | 101 | 110 | 111 |)
 
 ```{code-cell} ipython3
 def f(x,y):
