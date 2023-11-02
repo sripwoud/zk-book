@@ -54,7 +54,9 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Build book
-        run: jupyter-book build --path-output . docs
+        run: |
+          source .venv/bin/activate
+          poe build
 
       - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v3.6.1
