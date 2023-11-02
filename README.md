@@ -2,7 +2,7 @@
 
 ## Development
 ### Pre-requisites
-- [poetry]
+- [`poetry`](https://python-poetry.org/)
 - install deps: `poetry install`
 
 ### Build book in watch mode: `peotry run poe dev`
