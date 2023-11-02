@@ -4,7 +4,6 @@
 ### Pre-requisites
 - [poetry]
 - install deps: `poetry install`
-- start poetry shell: `poetry shell`
 
-### Build book in watch mode: `poe dev`
+### Build book in watch mode: `peotry run poe dev`
 
