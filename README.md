@@ -2,9 +2,9 @@
 
 ## Development
 ### Pre-requisites
-- cargo: `curl https://sh.rustup.rs -sSf | sh`
-- just: `cargo install just`
-- install deps: `just deps`
+- [poetry]
+- install deps: `poetry install`
+- start poetry shell: `poetry shell`
 
-### Build book in watch mode: `just`
+### Build book in watch mode: `poe dev`
 

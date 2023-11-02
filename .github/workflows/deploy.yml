@@ -18,11 +18,22 @@ jobs:
     - name: Set up Python 3.8
       uses: actions/setup-python@v4
       with:
-        cache: pip
+        cache: poetry
         python-version: 3.8
 
+    - name: Load cached Poetry installation
+      id: cached-poetry
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache  # the path depends on the OS
+        key: poetry-0  # increment to reset cache
+
+    - name: Install Poetry
+      if: steps.cached-poetry.outputs.cache-hit != 'true'
+      uses: snok/install-poetry@v1
+
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: poetry install
 
     - name: Build the book
       run: jupyter-book build --path-output . docs
