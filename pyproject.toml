@@ -13,14 +13,13 @@ python = ">=3.9,<3.13"
 build = "jupyter-book build --path-output . docs"
 dev = "watchmedo shell-command -p '*.md;*.yml;*.css' -R -c 'poe build' docs"
 
-
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
 jupyter-book = "^0.15.1"
 numpy = "^1.26.1"
 matplotlib = "^3.8.1"
 poethepoet = "^0.24.1"
-watchdog = {version = "^3.0.0", extras = ["watchmedo"]}
+watchdog = { version = "^3.0.0", extras = ["watchmedo"] }
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,0 +1,13 @@
+[tasks.build]
+alias = "b"
+description = "Build book"
+run = "jupyter-book build --path-output . docs"
+
+[tools]
+dprint = "latest"
+pkl = "latest"
+uv = "latest"
+ruff = "latest"
+hk = "latest"
+"cargo:convco" = "latest"
+"pipx:jupyter-book" = "latest"
